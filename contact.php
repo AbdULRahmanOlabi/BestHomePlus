@@ -1,41 +1,59 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+$mail = new PHPMailer(true); // Passing `true` Enables Exceptions
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+try {
+  //Server Settings
+  $mail->isSMTP(); // Set Mailer To Use SMTP
+  $mail->Host = 'smtp.gmail.com'; // Namecheap SMTP Server
+  $mail->SMTPAuth = true; // Enable SMTP Authentication
+  $mail->Username = 'abd.alrahman.olabi@gmail.com'; // SMTP Username
+  $mail->Password = '*************'; // SMTP Password
+  $mail->SMTPSecure = 'tls'; // Enable TLS Encryption, `ssl` Also Accepted
+  $mail->Port = 587; // TCP Port To Connect
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  // Get Form Data For The Meeting Form
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = "BestHomePlus - " . $_POST['subject'];
+  $message = $_POST['message'];
 
-  echo $contact->send();
-?>
+  //Recipients
+  $mail->setFrom('abd.alrahman.olabi@gmail.com', $name);
+  $mail->addAddress('abd.alrahman.olabi@gmail.com'); // Add a Recipient
+
+  // Content
+  $mail->isHTML(true); // Set Email Format To HTML
+  $mail->Subject = $subject;
+
+  // Styling for the email content
+  $email_content = '<div style="font-family: Arial, sans-serif; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">';
+  $email_content .= '<h2 style="color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Message Details</h2>';
+  $email_content .= '<ul style="list-style-type: none; padding: 0;">';
+  $email_content .= "<li style='margin-bottom: 10px;'><strong>Name:</strong> $name</li>";
+  $email_content .= "<li style='margin-bottom: 10px;'><strong>Email:</strong> $email</li>";
+  $email_content .= "<li style='margin-bottom: 10px;'><strong>Subject:</strong> $subject</li>";
+  $email_content .= "<li style='margin-bottom: 10px;'><strong>Message:</strong> $message</li>";
+
+  $email_content .= '</ul>';
+  $email_content .= '</div>';
+
+  $mail->Body = $email_content;
+
+  // Attempt To Send Email
+  $mail->send();
+  echo "<script>
+    alert('Your Message Has Been Successfully Sent.');
+    window.location.replace('Home');</script>";
+} catch (Exception $e) {
+  echo "<script>    alert('Sorry, There Was an Error While Sending Your Message. Please Try Again Later.');
+  window.location.replace('Home');</script>";
+}
