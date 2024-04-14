@@ -63,8 +63,8 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a style="justify-content: normal;" href="#"><i class="bi bi-download"></i><span
-                style="margin-left: 5px;">تحميل</span></a>
+            <a id="downloadLink" onclick="startDownload()" style="justify-content: normal;" href="../assets/BH 2023 - III - LUXE.pdf"><i
+                class="bi bi-cloud-download"></i><span style="margin-left: 5px;">ملف الأعمال</span></a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -386,121 +386,82 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-Walkin">غرف تبديل الملابس</li>
+              <li data-filter=".filter-Vanity">الخزن</li>
+              <li data-filter=".filter-Kitchen">المطابخ</li>
+              <li data-filter="*" class="filter-active">كل التصنيفات</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Kitchen">
+            <img src="../assets/img/portfolio/Classic-Kitchen.jpg" class="img-fluid" alt="صورة عن المطبخ الكلاسيكي">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="../assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
+              <h4>المطبخ الكلاسيكي</h4>
+              <p>المطبخ الكلاسيكي - تفاصيل</p>
+              <a href="../assets/img/portfolio/Classic-Kitchen.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="المطبخ الكلاسيكي"><i class="bx bx-zoom-in"></i></a>
+              <a href="CLassic-Kitchen-Details" class="details-link" title="المزيد من التفاصيل"><i
+                  class="bx bx-images"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Kitchen">
+            <img src="../assets/img/portfolio/Farmhouse-Kitchen.jpg" class="img-fluid" alt="صورة عن مطابخ المزرعة">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="../assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
+              <h4>مطبخ المزرعة</h4>
+              <p>مطبخ المزرعة - التفاصيل</p>
+              <a href="../assets/img/portfolio/Farmhouse-Kitchen.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="مطبخ المزرعة"><i class="bx bx-zoom-in"></i></a>
+              <a href="Farmhouse-Kitchen-Details" class="details-link" title="المزيد من التفاصيل"><i
+                  class="bx bx-images"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Kitchen">
+            <img src="../assets/img/portfolio/Modern-Kitchen.jpg" class="img-fluid" alt="صورة عن المطبخ الحديث ">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="../assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
+              <h4>المطبخ الحديث</h4>
+              <p>المطبخ الحديث = التفاصيل</p>
+              <a href="../ assets/img/portfolio/Modern-Kitchen.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="المطبخ الحديث"><i class="bx bx-zoom-in"></i></a>
+              <a href="Modern-Kitchen-Details" class="details-link" title="المزيد من التفاصيل"><i
+                  class="bx bx-images"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Vanity">
+            <img src="../assets/img/portfolio/Vanity.jpg" class="img-fluid" alt="صورة حول الخزن">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="../assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
+              <h4>الخزن</h4>
+              <p>الخزن - التفاصيل</p>
+              <a href="../assets/img/portfolio/Vanity.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="الخزن"><i class="bx bx-zoom-in"></i></a>
+              <a href="Vanity-Details" class="details-link" title="المزيد من التفاصيل"><i class="bx bx-images"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Walkin">
+            <img src="../assets/img/portfolio/Classic Walk-in.jpg" class="img-fluid" alt="صورة حول خزن الملابس الكلاسيكية">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="../assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
+              <h4>خزن الملابس الكلاسيكية</h4>
+              <p>خزن الملابس الكلاسيكية - التفاصيل</p>
+              <a href="../assets/img/portfolio/Classic Walk-in.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="خزن الملابس الكلاسيكية"><i class="bx bx-zoom-in"></i></a>
+              <a href="Classic-Walk-in-Details" class="details-link" title="المزيد من التقاصيل"><i class="bx bx-images"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="../assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Walkin">
+            <img src="../assets/img/portfolio/Modern Walk-in.jpg" class="img-fluid" alt="Image About Modern Walk-in">
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="../assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="../assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="../assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="../assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="../assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="../assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="Portfolio Details"><i
-                  class="bx bx-link"></i></a>
+              <h4>خزن الملابس الحديثة</h4>
+              <p>خزن الملابس الحديثة - التفاصيل</p>
+              <a href="../assets/img/portfolio/Modern Walk-in.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="خزن الملابس الحديثة"><i class="bx bx-zoom-in"></i></a>
+              <a href="Modern-Walk-in-Details" class="details-link" title="المزيد من التفاصيل"><i class="bx bx-images"></i></a>
             </div>
           </div>
 
@@ -698,8 +659,8 @@
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                data-bs-target="#faq-list-1">ما هي أنواع الخدمات التي تقدمها بيست هوم بلس<i
+              <i class="bx bx-help-circle icon-help"></i><a data-bs-toggle="collapse" class="collapse"
+                data-bs-target="#faq-list-1" style="text-align: right;">ما هي أنواع الخدمات التي تقدمها بيست هوم بلس<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p style="text-align: right;">
@@ -711,10 +672,10 @@
 
             <li data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
-                class="collapsed">كيف يمكنني تحديد موعد لاستشارة التصميم الداخلي؟<i
+                class="collapsed" style="text-align: right;">كيف يمكنني تحديد موعد لاستشارة التصميم الداخلي؟<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p style="text-align: right;">
                   من السهل تحديد موعد لاستشارة التصميم الداخلي مع بيست هوم بلس! ما عليك سوى الاتصال بنا عبر موقعنا
                   الإلكتروني أو الاتصال بنا، وسيسعد أحد مستشاري التصميم لدينا بمساعدتك في حجز موعد يناسبك
                 </p>
@@ -723,10 +684,10 @@
 
             <li data-aos="fade-up" data-aos-delay="200">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
-                class="collapsed">ما الذي يميز بيست هوم بلس عن شركات تصميم المنازل الأخرى؟<i
+                class="collapsed" style="text-align: right;">ما الذي يميز بيست هوم بلس عن شركات تصميم المنازل الأخرى؟<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p style="text-align: right;">
                   في بيست هوم بلس، نحن نفخر ببراعتنا الحرفية التي لا مثيل لها والاهتمام بالتفاصيل. فريقنا مكرس لتجاوز
                   توقعاتك من خلال الخدمة الشخصية وحلول التصميم المبتكرة المصممة خصيصًا لتلبية احتياجاتك وأسلوبك الفريد
                 </p>
@@ -735,10 +696,10 @@
 
             <li data-aos="fade-up" data-aos-delay="300">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
-                class="collapsed">هل يمكنني عرض أمثلة لمشاريع بيست هوم بلس السابقة؟<i
+                class="collapsed" style="text-align: right;">هل يمكنني عرض أمثلة لمشاريع بيست هوم بلس السابقة؟<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p style="text-align: right;">
                   قطعاً! يمكنك استكشاف مجموعتنا من خلال قسم المعرض بموقعنا الإلكتروني للاطلاع على أمثلة لمشاريعنا
                   السابقة، بما في ذلك التحولات الداخلية والتجديدات والمزيد
                 </p>
@@ -747,10 +708,10 @@
 
             <li data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
-                class="collapsed">كم من الوقت يستغرق مشروع التجديد النموذجي؟<i
+                class="collapsed" style="text-align: right;">كم من الوقت يستغرق مشروع التجديد النموذجي؟<i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p style="text-align: right;">
                   يمكن أن تختلف مدة مشروع التجديد اعتمادًا على نطاق العمل المعني وتعقيده. خلال الاستشارة الأولية الخاصة
                   بك، سيقوم فريقنا بتقييم مشروعك وتزويدك بتقدير الجدول الزمني بناءً على متطلباتك المحددة
                 </p>
@@ -768,28 +729,28 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Our Brand</h2>
-          <p>Unveil The Essence of BestHomePlus, Home To Luxewd and Memarco. Explore Our Values, Mission, and Unique
-            Offerings. From Luxurious Wood Designs To Comprehensive Construction Services, We Exceed Expectations in
-            Every Aspect. Join Us on a Journey of Excellence
+          <h2>علامتنا التجارية</h2>
+          <p>كشف النقاب عن جوهر بسيت هوم بلس موطن لوكسود وميماركو. استكشف قيمنا ورسالتنا وعروضنا الفريدة. من التصاميم
+            الخشبية الفاخرة إلى خدمات البناء الشاملة، نحن نتجاوز التوقعات في كل جانب. انضم إلينا في رحلة التميز
           </p>
         </div>
 
         <div class="row">
           <div class="col-lg-6 pt-4 pt-lg-0">
             <a target="_blank" href="https://luxewd.net/">
-              <h3 onMouseOver="this.style.color='#ffc51c'" onMouseOut="this.style.color='#414c64'">Luxewd</h3>
+              <h3 style="direction: rtl;" onMouseOver="this.style.color='#ffc51c'"
+                onMouseOut="this.style.color='#414c64'">لوكسود</h3>
             </a>
-            <p>
-              Welcome To Luxewd, a Prestigious Brand Under The BestHomePlus Umbrella. Luxewd Specializes in Crafting
-              Luxurious Wood Designs, Elevating Spaces With Unparalleled Elegance and Sophistication
+            <p style="direction: rtl;">
+              مرحبًا بك في لوكسود، العلامة التجارية المرموقة تحت مظلة بيست هوم بلس. شركة لوكسود متخصصة في صياغة التصاميم
+              الخشبية الفاخرة، والارتقاء بالمساحات بأناقة وتطور لا مثيل لهما
             </p>
             <div class="row">
               <div class="col-md-12">
-                <h4>Luxewd Services</h4>
-                <p>At Luxewd, We Offer a Range of Premium Wood Design Services, Including Bespoke Creations For
-                  Kitchens, Walk-In Closets, and Vanities. Our Talented Team of Designers is Dedicated To Transforming
-                  Your Living Space Into a Haven of Luxury and Style</p>
+                <h4 style="direction: rtl;">خدمات لوكسود</h4>
+                <p style="direction: rtl;">في لوكسود، نقدم مجموعة من خدمات التصميم الخشبي المتميزة، بما في ذلك
+                  الابتكارات المخصصة للمطابخ وخزائن الملابس وغرف الزينة. يكرس فريق المصممين الموهوب لدينا جهوده لتحويل
+                  مساحة معيشتك إلى ملاذ من الفخامة والأناقة</p>
               </div>
               <div class="col-lg-12">
                 <img src="../assets/img/Luxewd.jpg" class="img-fluid" alt="About Company" style="border-radius: 5px;">
@@ -798,19 +759,19 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <a target="_blank" href="https://mimar-co.com/">
-              <h3 onMouseOver="this.style.color='#e46111'" onMouseOut="this.style.color='#414c64'">Mimarco</h3>
+              <h3 style="direction: rtl;" onMouseOver="this.style.color='#e46111'"
+                onMouseOut="this.style.color='#414c64'">ميماركو</h3>
             </a>
-            <p>
-              Welcome To Mimarco, a Distinguished Brand Within The BestHomePlus Family. Mimarco Specializes in
-              Construction and Architecture, Offering Comprehensive Solutions For Your
-              Building
+            <p style="direction: rtl;">
+              مرحبًا بكم في ميماركو، العلامة التجارية المتميزة ضمن عائلة بيست هوم بلس. شركة ميماركو متخصصة في البناء
+              والهندسة المعمارية، وتقدم حلولاً شاملة للمبنى الخاص بك
             </p>
             <div class="row">
               <div class="col-md-12">
-                <h4>Mimarco Services</h4>
-                <p>From Concept To Completion, Mimarco Provides a Wide Range of Services Tailored To Your Construction
-                  Requirements. Whether You're Planning a New Build, Renovation, or Remodeling Project, Our Experienced
-                  Team is Here To Guide You Every Step of The Way</p>
+                <h4 style="direction: rtl;">خدمات ميماركو</h4>
+                <p style="direction: rtl;">من المفهوم إلى الاكتمال، توفر ميماركو مجموعة واسعة من الخدمات المصممة خصيصًا
+                  لمتطلبات البناء الخاصة بك. سواء كنت تخطط لبناء مشروع جديد أو تجديده أو إعادة تصميمه، فإن فريقنا ذو
+                  الخبرة موجود هنا لإرشادك في كل خطوة على الطريق</p>
               </div>
             </div>
             <div class="col-lg-12">
@@ -827,10 +788,9 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>If You Have Any Questions, Inquiries, or Need Assistance, Feel Free To Contact Us Using The Information
-            Provided Below. Our Team is Here To Assist You and Provide The Support You Need To Achieve Your Home Design
-            Goals</p>
+          <h2>تواصل معنا</h2>
+          <p>إذا كانت لديك أية أسئلة أو استفسارات أو كنت بحاجة إلى مساعدة، فلا تتردد في الاتصال بنا باستخدام المعلومات
+            المقدمة أدناه. فريقنا موجود لمساعدتك وتقديم الدعم الذي تحتاجه لتحقيق أهداف تصميم منزلك</p>
         </div>
 
         <div class="row">
@@ -841,22 +801,22 @@
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-map"></i>
-                  <h3>Our Address</h3>
-                  <p>WareHouse 4 , 19th Street – Industrial Zone<br>
-                    Nadd Al Hamar – Dubai – UAE</p>
+                  <h3>عنواننا</h3>
+                  <p>مستودع 4 شارع 19 – المنطقة الصناعية<br>
+                    نضال حمر – دبي – الإمارات العربية المتحدة</p>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
+                  <h3>بريدنا الالكتروني</h3>
                   <p>Info@BestHomePlus.net<br>Contact@BestHomePlus.net</p>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
+                  <h3>اتصل بنا</h3>
                   <p>+971 566616168<br>+1 3439987552</p>
                 </div>
               </div>
@@ -865,20 +825,24 @@
             <div class="col-lg-12 mt-4">
               <form action="contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                  </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    <input style="direction: rtl;" type="email" class="form-control" name="email" id="email"
+                      placeholder="الرجاء ادخال بريدك الالكروني" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input style="direction: rtl;" type="text" name="name" class="form-control" id="name"
+                      placeholder="الرجاء ادخال اسمك" required>
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  <input style="direction: rtl;" type="text" class="form-control" name="subject" id="subject"
+                    placeholder="الرجاء ادخال الموضوع" required>
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  <textarea style="direction: rtl;" class="form-control" name="message" rows="5"
+                    placeholder="الرجاء ادخال الرسالة" required></textarea>
                 </div>
-                <div class="text-center mt-3"><button type="submit">Send Message</button></div>
+                <div class="text-center mt-3"><button type="submit">ارسال الرسالة</button></div>
               </form>
             </div>
 
@@ -900,44 +864,44 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>BestHomePlus</h3>
+          <div class="col-lg-3 col-md-6 footer-contact" style="direction: rtl;">
+            <h3>بيست هوم بلس</h3>
             <p>
-              WareHouse 4 , 19th Street – Industrial Zone<br>
-              Nadd Al Hamar<br>
-              Dubai – UAE<br><br>
-              <strong>Phone:</strong> +971 566616168<br>
-              <strong>Email:</strong> Info@BestHomePlus.net<br>
+              مستودع 4 شارع 19 – المنطقة الصناعية<br>
+              نضال حمر<br>
+              دبي – الإمارات العربية المتحدة<br><br>
+              +971 566616168 <strong>:ارقام الموبايل</strong><br>
+              Info@BestHomePlus.net <strong>:بريدنا الالكتروني</strong><br>
             </p>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-2 col-md-6 footer-links" style="direction: rtl;">
+            <h4>روابط مفيدة</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">HomePage</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Our Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#team">Our Team</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
+              <li><i class="bx bx-chevron-left"></i><a href="#hero">الصفحة الرئيسية</a></li>
+              <li><i class="bx bx-chevron-left"></i><a href="#about">حول الشركة</a></li>
+              <li><i class="bx bx-chevron-left"></i><a href="#serviecs">خدماتنا</a></li>
+              <li><i class="bx bx-chevron-left"></i><a href="#gallery">المعرض</a></li>
+              <li><i class="bx bx-chevron-left"></i><a href="#brand">علامتنا التجارية</a></li>
+              <li><i class="bx bx-chevron-left"></i><a href="#contact">تواصل معنا</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+          <div class="col-lg-3 col-md-6 footer-links" style="direction: rtl;">
+            <h4>خدماتنا</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Interior Design Consultations</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Customized Renovation Solutions</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Luxury Furniture Selection</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Smart Home Integration</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Exquisite Décor Solutions</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#serviecs">Custom Home Construction</a></li>
+              <li><i class="bx bx-chevron-left"></i> <a href="#serviecs">استشارات التصميم الداخلي</a></li>
+              <li><i class="bx bx-chevron-left"></i> <a href="#serviecs">حلول التجديد المخصصة</a></li>
+              <li><i class="bx bx-chevron-left"></i> <a href="#serviecs">اختيار الأثاث الفاخر</a></li>
+              <li><i class="bx bx-chevron-left"></i> <a href="#serviecs">التكامل مع المنزل الذكي</a></li>
+              <li><i class="bx bx-chevron-left"></i> <a href="#serviecs">حلول الديكور الرائعة</a></li>
+              <li><i class="bx bx-chevron-left"></i> <a href="#serviecs">بناء المنازل المخصصة</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>About BestHomePlus</h4>
-            <p>We Are a Dynamic Team Dedicated To Enhancing Your Home With Exceptional Designs and Quality Craftsmanship
+          <div class="col-lg-4 col-md-6 footer-newsletter" style="direction: rtl;">
+            <h4>حول بيست هوم بلس</h4>
+            <p>نحن فريق ديناميكي مخصص لتحسين منزلك بتصميمات استثنائية وحرفية عالية الجودة
             </p>
           </div>
 
@@ -949,7 +913,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>BestHomePlus</span></strong>. All Rights Reserved
+          كل الحقوق محفوظة <strong><span>لشركة بيست هوم بلس</span></strong>. &copy; حقوق النشر
         </div>
         <!-- <div class="credits">
           Designed by <a href="">AbdULRahman Al-Olabi</a>
@@ -982,6 +946,37 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <script>
+    function startDownload() {
+      var downloadLink = document.getElementById("downloadLink");
+      var progressBar = document.createElement("div");
+      progressBar.id = "progressBar";
+      progressBar.className = "progress-bar";
+      progressBar.innerHTML = `
+        <div class="progress"></div>
+        <div class="progress-text">0%</div>
+      `;
+    
+      downloadLink.parentNode.replaceChild(progressBar, downloadLink);
+    
+      var progressText = progressBar.querySelector(".progress-text");
+      var progress = progressBar.querySelector(".progress");
+    
+      var width = 0;
+      var interval = setInterval(function () {
+        width++;
+        progressText.innerText = width + "%";
+        progress.style.transform = `rotate(${(width / 100) * 360 - 90}deg)`;
+        if (width >= 100) {
+          clearInterval(interval);
+          progressText.innerHTML = '<i class="bi bi-check-circle-fill"></i>';
+          progressText.style.fontSize = "24px";
+        }
+      }, 30);
+    }
+    
+  </script>
 
 </body>
 

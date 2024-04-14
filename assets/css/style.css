@@ -26,6 +26,79 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Download button
+--------------------------------------------------------------*/
+
+.progress-bar {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  margin-left: 20px;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #ffbb2c;
+  border-radius: 50%;
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  width: 200%;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #ffbb2c;
+}
+
+/*--------------------------------------------------------------
+# ScrollBar
+--------------------------------------------------------------*/
+
+body {
+  --sb-track-color: #58585a;
+  --sb-thumb-color: #ffc107;
+  --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -893,6 +966,11 @@ section {
   bottom: 0;
 }
 
+.portfolio .img-fluid {
+  border-radius: 5px;
+  width: 500px !important;
+  height: 500px !important;
+}
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1180,13 +1258,13 @@ section {
   list-style: none;
 }
 
-.faq .faq-list li + li {
+.faq .faq-list li+li {
   margin-top: 15px;
 }
 
 .faq .faq-list li {
   padding: 20px;
-  background: #fafafc;
+  background: #fff;
   border-radius: 4px;
   position: relative;
 }
@@ -1208,7 +1286,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #ffce3a;
+  color: #ffc107;
 }
 
 .faq .faq-list .icon-show,
@@ -1230,7 +1308,6 @@ section {
 
 .faq .faq-list a.collapsed {
   color: #343a40;
-  transition: 0.3s;
 }
 
 .faq .faq-list a.collapsed:hover {
