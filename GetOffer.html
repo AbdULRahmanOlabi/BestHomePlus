@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>BestHomePlus - HomePage</title>
+
+    <meta
+        content="BestHomePlus is a Leading Company Specializing in Luxury Home Design and Construction. Our Services Include Bespoke Interior Design, Premium Woodwork, and Comprehensive Construction Solutions. With a Focus on Craftsmanship, Innovation, and Customer Satisfaction, We Strive To Exceed Expectations in Every Project. Explore Our Portfolio and Discover How We Can Elevate Your Living Space."
+        name="description">
+    <meta
+        content="BestHomePlus, luxury home design, interior design, premium woodwork, construction solutions, craftsmanship, innovation, customer satisfaction"
+        name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-transparent">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <!-- <h1 class="logo"><a href="index.html">BestHomePlus</a></h1> -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="Home" class="logo"><img src="assets/img/logo.png" alt="Company Logo" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">HomePage</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="#services">Our Services</a></li> -->
+                    <li class="dropdown">
+                        <a href="#services"><i class="bi bi-gear"></i><span style="margin-left: 5px;">Our
+                                Services</span></a>
+                        <ul class="dd-box-shadow">
+                            <li><a href="GetOffer.html"><iconify-icon icon="emojione-v1:label" width="1.2em"
+                                        height="1.2em"></iconify-icon> Get
+                                    Offer</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
+                    <li><a class="nav-link scrollto" href="#brand">Our Brand</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href=""><i class="bi bi-translate"></i><span style="margin-left: 5px;">Language</span></a>
+                        <ul class="dd-box-shadow">
+                            <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-states" width="1.2em"
+                                        height="1.2em"></iconify-icon> English</a></li>
+                            <li><a href="Ar/Home"><iconify-icon icon="emojione-v1:flag-for-united-arab-emirates"
+                                        width="1.2em" height="1.2em"></iconify-icon>
+                                    العربية</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="downloadLink" onclick="startDownload()" href="assets/BH 2023 - I.pdf"><i
+                                class="bi bi-cloud-download"></i><span style="margin-left: 5px;">Portfolio</span></a>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main"></main>
+
+    <!-- ======= Get Offer Section ======= -->
+    <section id="contact" class="contact" style="padding: 120PX;">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Get Offer</h2>
+                <p>To receive a personalized quote for your home design project, please provide the following details
+                    about your space. Specifying the number of bathrooms, square footage, property type, and preferred
+                    standard will help us create an accurate estimate tailored to your requirements.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-12 mt-4">
+                    <form action="" method="post" role="form" class="php-email-form">
+
+                        <div class="row mt-3">
+                            <div class="col-md-4 form-group">
+                                <input type="number" class="form-control" name="bathrooms" id="bathrooms"
+                                    placeholder="Number of Bathrooms" required>
+                            </div>
+                            <div class="col-md-4 form-group mt-3 mt-md-0">
+                                <input type="number" class="form-control" name="square" id="square" placeholder="Square"
+                                    required>
+                            </div>
+                            <div class="col-md-4 form-group mt-3 mt-md-0">
+                                <select class="form-control" name="property_type" id="property_type" required>
+                                    <option value="" disabled selected>Select Villa or Apartment</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="apartment">Apartment</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <select class="form-control" name="property_standard" id="property_standard" required>
+                                <option value="" disabled selected>Select Standard</option>
+                                <option value="basic">Basic</option>
+                                <option value="standard">Standard</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                        </div>
+
+                        <div class="text-center mt-3"><button type="submit">Get Offer</button></div>
+                        <div id="offerResult" class="mt-3 text-center" style="font-weight: bold; font-size: 1.2rem;">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Get Offer Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>BestHomePlus</h3>
+                        <p>
+                            Nadd Al Hamar<br>
+                            Dubai – UAE<br><br>
+                            <strong>Phone:</strong> +971 566616168<br>
+                            <strong>Email:</strong> Info@BestHomePlus.net<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#hero">HomePage</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">About Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Our Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Gallery</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#team">Our Team</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Fit-Outs Residential</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Fit-Outs Commercial</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Renovations</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Landscape</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>About BestHomePlus</h4>
+                        <p>We Are a Dynamic Team Dedicated To Enhancing Your Home With Exceptional Designs and Quality
+                            Craftsmanship
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>BestHomePlus</span></strong>. All Rights Reserved
+                </div>
+                <!-- <div class="credits">
+          Designed by <a href="">AbdULRahman Al-Olabi</a>
+        </div> -->
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="http://facebook.com/besthomep" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/besthomeplusdecor/" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="http://t.me/BestHomePlus" class="telegram"><i class="bi bi-telegram"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+
+    <div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/+971566616168"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function startDownload() {
+            var downloadLink = document.getElementById("downloadLink");
+            var progressBar = document.createElement("div");
+            progressBar.id = "progressBar";
+            progressBar.className = "progress-bar";
+            progressBar.innerHTML = `
+        <div class="progress"></div>
+        <div class="progress-text">0%</div>
+      `;
+
+            downloadLink.parentNode.replaceChild(progressBar, downloadLink);
+
+            var progressText = progressBar.querySelector(".progress-text");
+            var progress = progressBar.querySelector(".progress");
+
+            var width = 0;
+            var interval = setInterval(function () {
+                width++;
+                progressText.innerText = width + "%";
+                progress.style.transform = `rotate(${(width / 100) * 360 - 90}deg)`;
+                if (width >= 100) {
+                    clearInterval(interval);
+                    progressText.innerHTML = '<i class="bi bi-check-circle-fill"></i>';
+                    progressText.style.fontSize = "24px";
+                }
+            }, 30);
+        }
+
+    </script>
+
+    <script>
+        document.querySelector('.php-email-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const bathrooms = parseInt(document.getElementById('bathrooms').value) || 0;
+            const square = parseInt(document.getElementById('square').value) || 0;
+            const standard = document.getElementById('property_standard').value;
+
+            // Excel coefficients from your data (H5 to P5 row)
+            const excel = {
+                J: 800,  // Premium base rate (J5)
+                K: 60,   // Premium multiplier (K5)
+                M: 35,   // Standard multiplier (M5)
+                O: 10    // Basic multiplier (O5)
+            };
+
+            // Calculate based on standard
+            let offer;
+            switch (standard) {
+                case 'premium':
+                    // Formula: (J5*K5) + (I5*H5) = (800*60) + (square*bathrooms)
+                    offer = (excel.J * excel.K) + (square * bathrooms);
+                    break;
+                case 'standard':
+                    // Formula: (M5*J5) + (I5*H5) = (35*800) + (square*bathrooms)
+                    offer = (excel.M * excel.J) + (square * bathrooms);
+                    break;
+                case 'basic':
+                    // Formula: O5*J5 = 10*800
+                    offer = excel.O * excel.J;
+                    break;
+                default:
+                    offer = 0;
+            }
+
+            // Display result
+            const resultDiv = document.getElementById('offerResult');
+            if (offer > 0) {
+                resultDiv.innerHTML = `Estimated Offer: $${offer.toLocaleString()}`;
+                resultDiv.style.color = '#28a745';
+            } else {
+                resultDiv.innerHTML = 'Please fill all required fields correctly';
+                resultDiv.style.color = '#dc3545';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
