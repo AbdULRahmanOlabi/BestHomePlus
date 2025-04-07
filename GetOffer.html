@@ -272,39 +272,32 @@
         document.querySelector('.php-email-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            // Get form values
             const bathrooms = parseInt(document.getElementById('bathrooms').value) || 0;
             const square = parseInt(document.getElementById('square').value) || 0;
             const standard = document.getElementById('property_standard').value;
 
-            // Excel coefficients from your data (H5 to P5 row)
             const excel = {
-                J: 800,  // Premium base rate (J5)
-                K: 60,   // Premium multiplier (K5)
-                M: 35,   // Standard multiplier (M5)
-                O: 10    // Basic multiplier (O5)
+                J: 800,
+                K: 60,
+                M: 35,
+                O: 10
             };
 
-            // Calculate based on standard
             let offer;
             switch (standard) {
                 case 'premium':
-                    // Formula: (J5*K5) + (I5*H5) = (800*60) + (square*bathrooms)
                     offer = (excel.J * excel.K) + (square * bathrooms);
                     break;
                 case 'standard':
-                    // Formula: (M5*J5) + (I5*H5) = (35*800) + (square*bathrooms)
                     offer = (excel.M * excel.J) + (square * bathrooms);
                     break;
                 case 'basic':
-                    // Formula: O5*J5 = 10*800
                     offer = excel.O * excel.J;
                     break;
                 default:
                     offer = 0;
             }
 
-            // Display result
             const resultDiv = document.getElementById('offerResult');
             if (offer > 0) {
                 resultDiv.innerHTML = `Estimated Offer: $${offer.toLocaleString()}`;
