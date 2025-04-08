@@ -272,27 +272,38 @@
         document.querySelector('.php-email-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
+            const propertyType = document.getElementById('property_type').value;
             const bathrooms = parseInt(document.getElementById('bathrooms').value) || 0;
             const square = parseInt(document.getElementById('square').value) || 0;
             const standard = document.getElementById('property_standard').value;
 
-            const excel = {
-                J: 800,
-                K: 60,
-                M: 35,
-                O: 10
+            const pricingMatrix = {
+                apartment: {
+                    I: 7000,
+                    K: 50,
+                    M: 30,
+                    O: 7
+                },
+                villa: {
+                    I: 7000,
+                    K: 60,
+                    M: 35,
+                    O: 10
+                }
             };
 
             let offer;
             switch (standard) {
                 case 'premium':
-                    offer = (excel.J * excel.K) + (square * bathrooms);
+                    offer = (square * pricingMatrix[propertyType].K) + pricingMatrix[propertyType].I *
+                        bathrooms;
                     break;
                 case 'standard':
-                    offer = (excel.M * excel.J) + (square * bathrooms);
+                    offer = (pricingMatrix[propertyType].M * square) + pricingMatrix[propertyType].I *
+                        bathrooms;
                     break;
                 case 'basic':
-                    offer = excel.O * excel.J;
+                    offer = pricingMatrix[propertyType].O * square;
                     break;
                 default:
                     offer = 0;
