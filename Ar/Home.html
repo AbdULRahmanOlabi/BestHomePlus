@@ -52,30 +52,41 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">الصفحة الرئيسية</a></li>
           <li><a class="nav-link scrollto" href="#about">حول الشركة</a></li>
-          <li><a class="nav-link scrollto" href="#services">خدماتنا</a></li>
+          <li class="dropdown">
+            <a href="#services"><i class="bi bi-gear"></i><span style="margin-left: 5px;">خدماتنا</span></a>
+            <ul class="dd-box-shadow">
+              <li><a href="GetOffer">
+                  <iconify-icon icon="emojione-v1:label" width="1.2em" height="1.2em"></iconify-icon>
+                  اطلب عرض سعر
+                </a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto" href="#portfolio">المعرض</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
           <li><a class="nav-link scrollto" href="#brand">علامتنا التجارية</a></li>
           <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
           <li class="dropdown">
-            <a style="justify-content: normal;" href=""><i class="bi bi-translate"></i><span
-                style="margin-left: 5px;">اللغة</span></a>
+            <a href=""><i class="bi bi-translate"></i><span style="margin-left: 5px;">اللغة</span></a>
             <ul class="dd-box-shadow">
-              <li><a href="../Home"><iconify-icon icon="emojione-v1:flag-for-united-states"></iconify-icon> English</a>
-              </li>
-              <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon> العربية</a>
-              </li>
+              <li><a href="../Home">
+                  <iconify-icon icon="emojione-v1:flag-for-united-states" width="1.2em" height="1.2em"></iconify-icon>
+                  English
+                </a></li>
+              <li><a href="#">
+                  <iconify-icon icon="emojione-v1:flag-for-united-arab-emirates" width="1.2em"
+                    height="1.2em"></iconify-icon>
+                  العربية
+                </a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a id="downloadLink" onclick="startDownload()" style="justify-content: normal;"
-              href="../assets/BH 2023 - I.pdf"><i class="bi bi-cloud-download"></i><span style="margin-left: 5px;">ملف
-                الأعمال</span></a>
+            <a id="downloadLink" onclick="startDownload()" href="../assets/BH 2023 - I.pdf">
+              <i class="bi bi-cloud-download"></i>
+              <span style="margin-left: 5px;">ملف الأعمال</span>
+            </a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
 
     </div>
   </header><!-- End Header -->
@@ -980,8 +991,6 @@
             </div>
 
           </div>
-
-
 
         </div>
 
