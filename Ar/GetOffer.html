@@ -394,18 +394,18 @@
 
             const pricingMatrix = {
                 apartment: {
-                    premium: { J: 800, K: 55, H: 7000, I: 2 },
-                    standard: { J: 800, M: 28, H: 7000, I: 2 },
-                    basic: { J: 800, O: 15, H: 7000, I: 2 }
+                    premium: {K: 55, H: 7000, I: 2 },
+                    standard: {M: 28, H: 7000, I: 2 },
+                    basic: {O: 15, H: 7000, I: 2 }
                 },
                 villa: {
-                    premium: { J: 1400, K: 65, H: 7000, I: 2 },
-                    standard: { J: 1400, M: 33, H: 7000, I: 2 },
-                    basic: { J: 1400, O: 18, H: 7000, I: 2 }
+                    premium: {K: 65, H: 7000, I: 2 },
+                    standard: {M: 33, H: 7000, I: 2 },
+                    basic: {O: 18, H: 7000, I: 2 }
                 },
                 office: {
-                    premium: { J: 1000, K: 65, H: 7000, I: 1 },
-                    standard: { J: 1000, M: 33, H: 7000, I: 1 }
+                    premium: {K: 65, H: 7000, I: 1 },
+                    standard: {M: 33, H: 7000, I: 1 }
                 }
             };
 
@@ -414,13 +414,13 @@
                 const pricing = pricingMatrix[propertyType][standard];
 
                 if (standard === 'premium') {
-                    offer = (pricing.J * pricing.K) + (pricing.H * bathrooms);
+                    offer = (square * pricing.K) + (pricing.H * bathrooms);
                 }
                 else if (standard === 'standard') {
-                    offer = (pricing.J * pricing.M) + (pricing.H * bathrooms);
+                    offer = (square * pricing.M) + (pricing.H * bathrooms);
                 }
                 else if (standard === 'basic') {
-                    offer = (pricing.J * pricing.O) + (pricing.H * pricing.I / 2);
+                    offer = (square * pricing.O) + (pricing.H * pricing.I / 2);
                 }
             }
 
