@@ -236,8 +236,15 @@
     <script src="../assets/js/main.js"></script>
 
     <script>
-        document.getElementById('property_type').addEventListener('change', function () {
-            const propertyType = this.value;
+        let formSubmitted = false;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateStandardOptions();
+            setupEventListeners();
+        });
+
+        function updateStandardOptions() {
+            const propertyType = document.getElementById('property_type').value;
             const standardSelect = document.getElementById('property_standard');
 
             standardSelect.innerHTML = '<option value="" disabled selected>اختر المعيار</option>';
@@ -254,7 +261,9 @@
                     <option value="premium">متميز</option>
                 `;
             }
-        });
+
+            updateServiceNotes();
+        }
 
         const serviceNotes = {
             apartment: {
@@ -365,9 +374,9 @@
             }
         };
 
-        document.getElementById('property_standard').addEventListener('change', function () {
+        function updateServiceNotes() {
             const propertyType = document.getElementById('property_type').value;
-            const standard = this.value;
+            const standard = document.getElementById('property_standard').value;
             const notesDiv = document.getElementById('serviceNotes');
 
             if (propertyType && standard && serviceNotes[propertyType]?.[standard]) {
@@ -375,11 +384,9 @@
             } else {
                 notesDiv.innerHTML = '';
             }
-        });
+        }
 
-        document.querySelector('.php-email-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-
+        function calculateOffer() {
             const propertyType = document.getElementById('property_type').value;
             const bathrooms = parseInt(document.getElementById('bathrooms').value) || 0;
             const square = parseInt(document.getElementById('square').value) || 0;
@@ -402,7 +409,7 @@
                 }
             };
 
-            let offer;
+            let offer = 0;
             if (propertyType && standard && pricingMatrix[propertyType]?.[standard]) {
                 const pricing = pricingMatrix[propertyType][standard];
 
@@ -415,10 +422,12 @@
                 else if (standard === 'basic') {
                     offer = (pricing.J * pricing.O) + (pricing.H * pricing.I / 2);
                 }
-            } else {
-                offer = 0;
             }
 
+            displayOfferResult(offer);
+        }
+
+        function displayOfferResult(offer) {
             const resultDiv = document.getElementById('offerResult');
             if (offer > 0) {
                 resultDiv.innerHTML = `التقدير المبدئي: ${offer.toLocaleString('ar-EG')} درهم إماراتي`;
@@ -427,7 +436,33 @@
                 resultDiv.innerHTML = 'يرجى تعبئة جميع الحقول المطلوبة بشكل صحيح';
                 resultDiv.style.color = '#dc3545';
             }
-        });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('property_type').addEventListener('change', function () {
+                updateStandardOptions();
+                if (formSubmitted) calculateOffer();
+            });
+
+            document.getElementById('property_standard').addEventListener('change', function () {
+                updateServiceNotes();
+                if (formSubmitted) calculateOffer();
+            });
+
+            document.getElementById('bathrooms').addEventListener('input', function () {
+                if (formSubmitted) calculateOffer();
+            });
+
+            document.getElementById('square').addEventListener('input', function () {
+                if (formSubmitted) calculateOffer();
+            });
+
+            document.querySelector('.php-email-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                formSubmitted = true;
+                calculateOffer();
+            });
+        }
     </script>
 
 </body>
